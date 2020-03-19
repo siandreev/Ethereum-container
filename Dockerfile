@@ -3,20 +3,20 @@ FROM ubuntu:xenial
 RUN apt-get update && apt-get install --yes software-properties-common
 RUN add-apt-repository ppa:ethereum/ethereum
 RUN apt-get update && apt-get install --yes geth
-RUN apt-get update && apt-get install --yes bootnode
 
-COPY node1 /node1
-COPY node2 /node2
-COPY devnet.json ./devnet.json
-COPY boot.key ./boot.key
-COPY entrypoint.sh ./entrypoint.sh
+COPY node1 home/datadir/node1
+COPY node2 home/datadir/node2
+COPY devnet.json home/datadir/devnet.json
+COPY entrypoint.sh home/datadir/entrypoint.sh
+
+RUN geth --datadir home/datadir/node1 init home/datadir/devnet.json
+RUN geth --datadir home/datadir/node2 init home/datadir/devnet.json
 
 EXPOSE 8541
 EXPOSE 8542
-EXPOSE 30310
 EXPOSE 30311
 EXPOSE 30312
 
-ENTRYPOINT ["./entrypoint.sh"]
+ENTRYPOINT ["home/datadir/entrypoint.sh"]
 
 
