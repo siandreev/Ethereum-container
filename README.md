@@ -55,7 +55,7 @@ ERC20_Coin
 >contract.totalSupply()
 1000
 
-> contract.transfer("0x0ce59225bcd447feaed698ed754d309feba5fc63", 10, {from: "0x073cfa4b6635b1a1b96f6363a9e499a8076b6107"})
+> contract.transfer.call("0x0ce59225bcd447feaed698ed754d309feba5fc63", 10, {from: "0x073cfa4b6635b1a1b96f6363a9e499a8076b6107"})
 
 > contract.balanceOf("0x0ce59225bcd447feaed698ed754d309feba5fc63")
 10
