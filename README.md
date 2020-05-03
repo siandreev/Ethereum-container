@@ -37,7 +37,7 @@ balance: 70 ETH
 ```
 contract address: 0x70009254e451916fb5543d161768f489289384fb
 first account balance: 1000 tokens
-second account balance: 0 tokens
+second account balance: 200 tokens
 ```
 - how to try some methods:
 ```
@@ -53,11 +53,11 @@ ERC20_Coin
 1000
 
 >contract.totalSupply()
-1000
+1200
 
 > contract.transfer.call("0x0ce59225bcd447feaed698ed754d309feba5fc63", 10, {from: "0x073cfa4b6635b1a1b96f6363a9e499a8076b6107"})
 
 > contract.balanceOf("0x0ce59225bcd447feaed698ed754d309feba5fc63")
-10
+210
 ```
 
