@@ -1,8 +1,7 @@
 ## Ethereum-container
 [See at docker hub](https://hub.docker.com/repository/docker/siandreev/ethereum-rpc-test)
 
-This container is designed to expand the private network of the blocked Ethereum.
-
+This container is designed to deploy the Ethereum blockchain private network.
 #### PoA-mining tag
 Two connected work nodes in the PoA mode are launched in the container. This means that DAG generation is not needed.
 - config of the first node:
